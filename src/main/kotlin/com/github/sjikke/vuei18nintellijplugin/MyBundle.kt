@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.sjikke.vuei18nintellijplugin
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls
