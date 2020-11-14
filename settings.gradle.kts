@@ -1,1 +1,1 @@
-rootProject.name = "vue-i18n-intellij-plugin"
+rootProject.name = "Vue I18n"

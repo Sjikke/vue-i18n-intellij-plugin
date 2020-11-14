@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# vue-i18n-intellij-plugin Changelog
+# vue-i18n-intellij Changelog
 
 ## [Unreleased]
 ### Added

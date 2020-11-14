@@ -1,15 +1,26 @@
 <idea-plugin>
     <id>com.github.sjikke.vuei18nintellijplugin</id>
-    <name>vue-i18n-intellij-plugin</name>
+    <name>Vue I18n</name>
     <vendor>sjikke</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.plugins.vue</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.sjikke.vuei18nintellijplugin.services.MyApplicationService"/>
+        <applicationService
+                serviceImplementation="com.github.sjikke.vuei18nintellijplugin.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.sjikke.vuei18nintellijplugin.services.MyProjectService"/>
+        <psi.referenceContributor
+                implementation="com.github.sjikke.vuei18nintellijplugin.language.MyReferenceContributor"/>
+        <lang.foldingBuilder language="HTML"
+                             implementationClass="com.github.sjikke.vuei18nintellijplugin.language.MyFoldingBuilder"/>
+        <lang.foldingBuilder language="TypeScript"
+                             implementationClass="com.github.sjikke.vuei18nintellijplugin.language.MyFoldingBuilder"/>
+        <lang.foldingBuilder language="JavaScript"
+                             implementationClass="com.github.sjikke.vuei18nintellijplugin.language.MyFoldingBuilder"/>
     </extensions>
 
     <applicationListeners>
